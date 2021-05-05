@@ -1,0 +1,67 @@
+<dgraph.drop.op>: string .
+<dgraph.graphql.p_query>: string @index(sha256) .
+<dgraph.graphql.schema>: string .
+<dgraph.graphql.xid>: string @index(exact) @upsert .
+type <dgraph.graphql> {
+	dgraph.graphql.schema
+	dgraph.graphql.xid
+}
+type <dgraph.graphql.persisted_query> {
+	dgraph.graphql.p_query
+}
+
+# Define Types
+
+type User {
+    username
+    email
+    pw
+    display_name
+	avatar_img	
+    date_joined
+}
+
+type Post {
+    title
+    content
+    date_published
+    author
+    tags
+    category
+    comments
+}
+
+type Comment {
+    content
+    author
+    date_published
+    commented_on
+}
+
+type Category {
+    name
+}
+
+type Tag {
+    name
+}
+
+# Define Directives and index
+
+username: string @index(hash) .
+display_name: string @index(term) .
+email: string @index(exact) @upsert .
+pw: password .
+avatar_img: string .
+date_joined: dateTime .
+
+title: string @index(term, trigram) .
+content: string @index(term) .
+date_published: dateTime .
+author: uid @reverse .
+tags: [uid] @reverse .
+category: uid . @reverse
+comments: [uid] @reverse .
+
+name: string @index(term, trigram).
+commented_on: uid @reverse .

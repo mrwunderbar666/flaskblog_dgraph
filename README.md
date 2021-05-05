@@ -19,6 +19,8 @@ DGRAPH_CREDENTIALS = None
 DGRAPH_OPTIONS = None
 ```
 
+Then you can import the schema to your instance of dgraph. Just copy the contents of `schema.dgraph` and paste it to your schema declaration. 
+
 Make sure you are in the repository root folder and now you can run the app via:
 
 ```
@@ -28,3 +30,11 @@ python run.py
 # Disclaimer
 
 This is a repository for learning and education purposes. I do not claim any credit in the design of the flaskblog, it belongs to [CoreyMS](https://coreyms.com/). The only part was developed by me is the DGraph class and the corresponding functions. I share this code, because it might be useful for others. Friendly pull requests, issues and forks are welcome. 
+
+
+# Todos
+
+- Tags for posts
+- Category for posts
+- Template to list user posts / categories
+- Search function
