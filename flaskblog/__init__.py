@@ -5,9 +5,9 @@ from flask_login import LoginManager
 from flaskblog import dgraph
 from flask_mail import Mail
 from flaskblog.config import Config
+from flaskblog.dgraph import DGraph
 
-
-dgraph = dgraph.DGraph()
+dgraph = DGraph()
 bcrypt = Bcrypt()
 
 login_manager = LoginManager()
