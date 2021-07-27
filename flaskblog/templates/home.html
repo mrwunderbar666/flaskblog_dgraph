@@ -3,7 +3,8 @@
 
 {% else %}
 <h1 class="mb-4">Blog Home</h1>
-{% endif %} {% for post in posts %}
+{% endif %} 
+{% for post in posts %}
 <article class="card mb-4">
     <div class="card-header">
         <img class="rounded-circle me-2" src="{{ url_for('static', filename='profile_pics/' + post.author.avatar_img) }}" height="50px"> By <a href="{{ url_for('posts.user_posts', username=post.author.username) }}">{% if post.author.display_name %} {{ post.author.display_name }} {% else %} {{ post.author.username }} {% endif

@@ -1,6 +1,6 @@
 from flaskblog import create_app
 
-app = create_app(config_json='config.json')
+app = create_app()
 
 if __name__ == '__main__':
     app.run(debug=True)

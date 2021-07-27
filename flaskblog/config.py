@@ -1,7 +1,7 @@
 import os
 
 class Config:
-    SECRET_KEY = os.environ.get('FLASKBLOG_SECRETKEY')
+    SECRET_KEY = os.environ.get('FLASKBLOG_SECRETKEY', '123456789')
     MAIL_SERVER = 'smtp.gmail.com'
     MAIL_PORT = 465
     MAIL_USE_TLS = False

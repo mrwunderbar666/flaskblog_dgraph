@@ -60,7 +60,7 @@ content: string @index(term) .
 date_published: dateTime .
 author: uid @reverse .
 tags: [uid] @reverse .
-category: uid . @reverse
+category: uid @reverse .
 comments: [uid] @reverse .
 
 name: string @index(term, trigram).

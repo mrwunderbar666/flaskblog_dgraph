@@ -10,7 +10,7 @@ pip install -r requirements.txt
 ```
 
 Make sure dgraph is installed or you have an access to the cloud.
-You can edit your dgraph settings either in `flaskblog/config.py` or in `flaskblog/config.py`
+You can edit your dgraph settings either in `flaskblog/config.py` or in `flaskblog/config.json`
 The default settings are:
 
 ```python

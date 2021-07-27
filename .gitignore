@@ -130,3 +130,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Dgraph cache / tmp files
+dgraph_cache/
